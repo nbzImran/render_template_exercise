@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select-story</title>
+</head>
+<body>
+    <h1>Questions for {{ title }}</h1>
+    <form action="/template/form.HTML">
+        <select name="story_id">
+            {% for story in stories %}
+            <option value="{{story.code}}">
+                {{ story.title }}
+            </option>
+            {% endfor %}
+        </select>
+        <button>GO</button>
+    </form>
+</body>
+</html>
